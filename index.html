@@ -16,19 +16,8 @@
     <link rel="stylesheet" href="css/theme.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
-    <style>
-        iframe{
-            border: 0px !important;
-            width: 377px !important;
-            height: 541px !important;
-            margin-left: 0px !important;
-            margin-bottom: 0 !important;
-            margin-top: 0 !important;
-        }
-        .iticks-last-msg{
-            color: #000000 !;
-        }
-    </style>
+    <link rel="stylesheet" href="css/vlite.css" type="text/css" media="all" />
+
 </head>
 <body>
 <header class="main_header">
@@ -118,13 +107,26 @@
     </div>
 </header>
 <a href="javascript:void(0)" class="control_toggle"></a>
-<div class="custom_bg img_bg def_bg"></div>
+<div class="custom_bg img_bg def_bg"> </div>
+    
+    
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+<video id="player-yt" class="vlite-js" data-youtube-id="OTaPJiP6-c0" data-options='{"autoplay": true, "controls": true, "playPause": true, "time": true, "progressBar": false, "volume": 100, "fullscreen": false, "poster": "../assets/poster.jpg", "bigPlay": true, "autoHide": true, "nativeControlsForTouch": false, "playsinline": true}'></video>
+    </div>
+
+  </div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/vlite.js"></script>
 <script type="text/javascript" src="js/modules.js"></script>
 <script type="text/javascript" src="js/theme.js"></script>
-<script>
+    <script>
+
     gallery_set = [
         {type: "image", image: "img/gallery/slider/00001d.jpg", thmb: "img/gallery/slider/thumb/00001d.jpg", alt: "Sarah Brown", title: "Dabliu is a luxurious mountain resort", description: "Dabliu is a luxurious mountain resort where you can enjoy the taste of privacy and the perfect venue for any event", titleColor: "#ffffff", descriptionColor: "#ffffff"},
         {type: "image", image: "img/gallery/slider/00002d.jpg", thmb: "img/gallery/slider/thumb/00002d.jpg", alt: "Sarah Brown", title: "Dabliu is a luxurious mountain resort", description: "Dabliu is a luxurious mountain resort where you can enjoy the taste of privacy and the perfect venue for any event", titleColor: "#ffffff", descriptionColor: "#ffffff"},
@@ -153,7 +155,7 @@
             fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
             fit: 'no_fit',
             slide_time: 3300, /*This time must be < then time in css*/
-            autoplay: 1,
+            autoplay: 0,
             show_controls: 1,
             slides: gallery_set
         });
@@ -206,6 +208,37 @@
         var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;
         s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
         </script>
+    
+<script>        
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+    
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+    <script>
+		new vlitejs({
+			selector: '#player-yt',
+			onReady: (player) => {
+				//Ready
+			}
+		});
+	</script>
                 
 </body>
 </html>
