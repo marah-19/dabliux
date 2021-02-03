@@ -126,8 +126,9 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-<video id="player-yt" class="vlite-js" data-youtube-id="OTaPJiP6-c0" data-options='{"autoplay": true, "controls": true, "playPause": true, "time": true, "progressBar": false, "volume": 100, "fullscreen": false, "poster": "../assets/poster.jpg", "bigPlay": true, "autoHide": true, "nativeControlsForTouch": false, "playsinline": true}'></video>
-    </div>
+	<video class=""  autoplay="autoplay" loop="loop"  height="90%" width="90%" playsinline>
+        <source src="img/gallery/slider/video.mp4" type="video/mp4" />
+</div>
 
   </div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -165,7 +166,7 @@
             fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
             fit: 'no_fit',
             slide_time: 3300, /*This time must be < then time in css*/
-            autoplay: 1,
+            autoplay: 0,
             show_controls: 1,
             slides: gallery_set
         });
