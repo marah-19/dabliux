@@ -65,18 +65,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                     <div class="sidepanel widget_text">
-                        <div class="textwidget">
-                            <div class="center_text">
-                                <a href="https://dabliu.typeform.com/to/ySEZERW0" target="_blank">
-                                    <img src="img/imgs/36.png" alt="" class="header_widget" />
-                                    <h6>Join investors</h6>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    </div>    
                     <div class="sidepanel widget_text">
                         <div class="textwidget">
                             <div class="center_text">
@@ -99,6 +88,16 @@
                         </div>
 
                     </div>
+                    <div class="sidepanel widget_text">
+                        <div class="textwidget">
+                            <div class="center_text">
+                                <a href="https://dabliu.typeform.com/to/ySEZERW0" target="_blank">
+                                    <img src="img/imgs/36.png" alt="" class="header_widget" />
+                                    <h6>Join investors</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div><!-- Header Wrapper -->
@@ -108,7 +107,7 @@
                     <li><a class="ico_social_twitter" target="_blank" href="https://twitter.com/dabliu_resort?s=09" title="twitter"></a></li>
                     <li><a class="ico_social_instagram" target="_blank" href="https://Instagram.com/dabliu_resort" title="Instagram"></a></li>
                     <li><a class="ico_social_linked" target="_blank" href="https://www.linkedin.com/company/dabliu-cc" title="linkedin"></a></li>
-                    <li><a class="ico_social_flickr" target="_blank" href="https://www.snapchat.com/add/dabliu_app" title="snapchat"></a></li>
+                    <li><a class="ico_social_flickr" target="_blank" href="https://www.instagram.com/dabliusa/" title="snapchat"></a></li>
                 </ul>
             </div>
             <div class="copyright">Copyright &copy; Dabliu.Co<br>All Rights Reserved<br/>Mobile Number: 920035444</div>
@@ -125,7 +124,7 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-	<video class="" id="video"  autoplay="autoplay" loop="loop"  height="90%" width="90%" playsinline controls>
+	<video id="myVideo" height="90%" width="90%" playsinline controls autoplay autoplay="autoplay" >
         <source src="img/gallery/slider/video.mp4" type="video/mp4" />
 </div>
 
@@ -156,7 +155,10 @@
 
     ]
 
-    jQuery(document).ready(function(){
+    
+
+    jQuery(document).ready(function(){    
+
         "use strict";
         jQuery('html').addClass('hasPag');
         jQuery('.custom_bg').remove();
@@ -164,7 +166,7 @@
             fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
             fit: 'no_fit',
             slide_time: 3300, /*This time must be < then time in css*/
-            autoplay: 0,
+            autoplay: 1,
             show_controls: 1,
             slides: gallery_set
         });
@@ -209,6 +211,9 @@
             jQuery('html').toggleClass('hide_controls');
         });
     });
+    jQuery(document).ready(function(){
+        $('video').prop('muted',true).play();
+    });
 </script>
 <script type="text/javascript" src="js/fs_gallery.js"></script>
     <script type="text/javascript">
@@ -239,6 +244,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
 </script>             
 </body>
 </html>
